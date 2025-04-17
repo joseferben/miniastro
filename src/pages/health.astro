@@ -1,0 +1,34 @@
+---
+import { db } from "@/db";
+
+// Wrap database operations in try/catch for resilience
+let dbStatus = "unknown";
+let userCount = 0;
+
+export const prerender = false;
+
+try {
+  try {
+    const users = await db.query.users.findMany();
+    dbStatus = dbStatus === "unknown" ? "connected" : dbStatus;
+    userCount = users.length;
+  } catch (queryError) {
+    console.error("Query error:", queryError);
+    dbStatus = "query-error";
+  }
+} catch (error) {
+  console.error("Health check database error:", error);
+  dbStatus = "connection-error";
+}
+---
+
+<h1>OK</h1>
+<p>
+  Time: {new Date().toISOString()}
+</p>
+<p>
+  Database: {dbStatus}
+</p>
+<p>
+  Users: {userCount}
+</p>

@@ -1,5 +1,5 @@
 ---
-import "../styles/global.css";
+import "@/styles/global.css";
 ---
 
 <!doctype html>
@@ -7,20 +7,22 @@ import "../styles/global.css";
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
-    <title>Plainstack</title>
+    <meta name="description" content="Minimal Astro Starter optimized for AI" />
+    <meta name="keywords" content="astro, minimal, starter, ai" />
+    <meta name="robots" content="index, follow" />
+    <title>miniastro.dev</title>
   </head>
-  <body>
+  <body class="h-full bg-background">
     <slot />
   </body>
+  <style>
+    html,
+    body {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
 </html>
-
-<style>
-  html,
-  body {
-    margin: 0;
-    width: 100%;
-    height: 100%;
-  }
-</style>

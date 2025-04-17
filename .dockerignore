@@ -26,6 +26,4 @@ pnpm-debug.log*
 # sqlite database
 data.db*
 
-# aider
 .aider*
-!.aider.conf.yml

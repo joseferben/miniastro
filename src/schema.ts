@@ -56,5 +56,10 @@ export const verifications = sqliteTable("verifications", {
   updatedAt: integer("updated_at", { mode: "timestamp" }),
 });
 
+export const hearts = sqliteTable("hearts", {
+  id: text("id").primaryKey(),
+  userId: text("user_id").notNull(),
+});
+
 // Inferred types
 export type User = InferSelectModel<typeof users>;

@@ -7,3 +7,5 @@ const sqlite = new BetterSqliteDatabase(DATABASE_URL);
 sqlite.pragma("journal_mode = WAL");
 sqlite.pragma("synchronous = normal");
 export const db = drizzle(sqlite, { schema });
+
+export type Database = typeof db;

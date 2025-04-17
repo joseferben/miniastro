@@ -3,6 +3,8 @@ import { BETTER_AUTH_SECRET } from "astro:env/server";
 import { drizzleAdapter } from "better-auth/adapters/drizzle";
 import { db } from "@/db";
 import * as schema from "@/schema";
+import { GOOGLE_CLIENT_ID } from "astro:env/client";
+import { GOOGLE_CLIENT_SECRET } from "astro:env/server";
 
 export const auth = betterAuth({
   secret: BETTER_AUTH_SECRET,
@@ -16,4 +18,10 @@ export const auth = betterAuth({
       verifications: schema.verifications,
     },
   }),
+  socialProviders: {
+    google: {
+      clientId: GOOGLE_CLIENT_ID,
+      clientSecret: GOOGLE_CLIENT_SECRET,
+    },
+  },
 });
