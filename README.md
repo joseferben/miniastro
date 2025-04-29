@@ -29,12 +29,6 @@
 2.  **Set up environment variables:**
 
     - Copy `.env.example` to `.env` (if an example file exists) or create a `.env` file.
-    - Define necessary variables, primarily `DATABASE_URL`. For local development, you can use:
-
-      ```env
-      DATABASE_URL=./local.db
-      ```
-
     - Add any required credentials for authentication providers (e.g., Google OAuth).
 
 3.  **Run database migrations:**
