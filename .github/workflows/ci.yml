@@ -13,7 +13,10 @@ jobs:
         node-version: [22]
     env:
       DATABASE_URL: ":memory:"
+      BETTER_AUTH_URL: "justforthebuild"
+      BETTER_AUTH_SECRET: "justforthebuild"
       GOOGLE_CLIENT_ID: "justforthebuild"
+      GOOGLE_CLIENT_SECRET: "justforthebuild"
     steps:
       - uses: actions/checkout@v4
       - name: setup pnpm
