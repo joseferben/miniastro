@@ -1,4 +1,6 @@
 /// <reference path="../.astro/types.d.ts" />
+/// <reference types="@testing-library/jest-dom/vitest" />
+/// <reference types="vitest/globals" />
 
 declare namespace App {
   // Note: 'import {} from ""' syntax does not work in .d.ts files.

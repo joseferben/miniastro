@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
-import { Heart, Book, CheckCircle } from "lucide-react";
+import { Heart, Book } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { actions } from "astro:actions";
 import { useQuery } from "@tanstack/react-query";
